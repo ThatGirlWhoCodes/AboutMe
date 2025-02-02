@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gianna G. Dimperio | About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            max-width: 900px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .carousel {
+            flex: 1;
+            position: relative;
+            max-width: 300px;
+        }
+        .carousel img {
+        width: 100%; 
+        height: 250px; 
+        object-fit: cover;
+        display: none;
+        border-radius: 8px;
+        }
+
+        .carousel img.active {
+            display: block;
+        }
+        .content {
+            flex: 2;
+            padding-left: 20px;
+        }
+        h1 {
+            margin: 0;
+            color: #333;
+        }
+        .tagline {
+            color: #666;
+            font-size: 18px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .portfolio-btn {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .social-links a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Carousel -->
+        <div class="carousel">
+            <img src="imgs/GGD1.jpg" class="active" alt="Image 1">
+            <img src="imgs/GGD2.png" alt="Image 2">
+            <img src="imgs/GGD3.JPG" alt="Image 3">
+            <img src="imgs/GGD4.PNG" alt="Image 4">
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <h1>Gianna G. Dimperio</h1>
+            <p class="tagline">Senior UX/UI Design Major | Programming Minor</p>
+
+            <h3>Why I Love Design &amp; Development:</h3>
+            <ul>
+                <li>✔ Creative expression</li>
+                <li>✔ Flexibility in design &amp; development (Front &amp; Back End)</li>
+                <li>✔ Thriving in collaborative environments</li>
+            </ul>
+
+            <h3>A Little About Me:</h3>
+            <ul>
+                <li>🐶 Dog person—Apollo (Portuguese Water Dog) &amp; Rocco (Mini Dachshund)</li>
+                <li>🏙️ Chicago native—Memories at 900 North on the Magnificent Mile</li>
+                <li>🧘‍♀️ Yoga enthusiast</li>
+                <li>📺 Bravo TV addict</li>
+                <li>📚 Sarah J. Maas fan</li>
+            </ul>
+
+            <a href="your-portfolio-link.com" class="portfolio-btn">View My Portfolio</a>
+
+            <div class="social-links">
+                <p>Connect with me:</p>
+                <a href="your-linkedin.com">LinkedIn</a>
+                <a href="your-github.com">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let images = document.querySelectorAll(".carousel img");
+        let index = 0;
+
+        function showNextImage() {
+            images[index].classList.remove("active");
+            index = (index + 1) % images.length;
+            images[index].classList.add("active");
+        }
+
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+    </script>
+
+</body>
+</html>
